@@ -1,0 +1,685 @@
+{
+  "school_id": "939",
+  "data_code": "432010600",
+  "name": "国防科技大学",
+  "type": "5011",
+  "school_type": "6000",
+  "school_nature": "36000",
+  "level": "2001",
+  "code_enroll": "9999999",
+  "belong": "中央军委",
+  "f985": "1",
+  "f211": "1",
+  "department": "2",
+  "admissions": "1",
+  "central": "2",
+  "dual_class": "38000",
+  "is_seal": "1",
+  "applied_grade": "0",
+  "num_subject": "0",
+  "num_master": "26",
+  "num_doctor": "23",
+  "num_academician": "6",
+  "num_library": "260万",
+  "num_lab": "0",
+  "province_id": "43",
+  "city_id": "4301",
+  "county_id": "0",
+  "is_ads": "2",
+  "is_recruitment": "1",
+  "create_date": "1953",
+  "area": 0,
+  "old_name": "国防科学技术大学",
+  "status": "1",
+  "add_id": "0",
+  "add_time": "2018-12-08 17:23:22",
+  "update_id": "1579",
+  "update_time": "2022-06-07 09:46:11",
+  "ad_level": "1",
+  "short": "国防科大",
+  "e_pc": "1",
+  "e_app": "1",
+  "ruanke_rank": "0",
+  "single": "",
+  "colleges_level": "",
+  "doublehigh": "0",
+  "wsl_rank": "0",
+  "qs_rank": "45",
+  "xyh_rank": "14",
+  "is_sell": "2",
+  "eol_rank": "814",
+  "school_batch": "7,14,1570,36,6",
+  "us_rank": "983",
+  "is_logo": "1",
+  "num_master2": "0",
+  "num_doctor2": "0",
+  "ai_status": "1",
+  "is_ads2": "2",
+  "coop_money": "0.00",
+  "bdold_name": "",
+  "logo": "/app/html/upload/logo/939.jpg",
+  "level_name": "普通本科",
+  "type_name": "军事类",
+  "school_type_name": "普通本科",
+  "school_nature_name": "公办",
+  "dual_class_name": "双一流",
+  "xueke_rank": {},
+  "province_single": {},
+  "single_year": 2021,
+  "remark": [],
+  "province_name": "湖南",
+  "city_name": "长沙市",
+  "town_name": "",
+  "weiwangzhan": "",
+  "urllinks": {
+    "71006": {
+      "school_id": "939",
+      "link": "https://s4.cnzz.com/z_stat.php?id=1254851676&web_id=1254851676",
+      "type": "71006",
+      "img_url": "",
+      "title": ""
+    },
+    "71004": {
+      "school_id": "939",
+      "link": "https://souky.eol.cn/HomePage/index_158.html",
+      "type": "71004",
+      "img_url": "",
+      "title": ""
+    }
+  },
+  "yjszs": "https://souky.eol.cn/HomePage/index_158.html",
+  "xiaoyuan": "",
+  "email": "zsb@nudt.edu.cn",
+  "school_email": "",
+  "address": "湖南省长沙市国防科学技术大学招生办公室",
+  "postcode": "410073",
+  "site": "http://www.gotonudt.cn/",
+  "school_site": "https://www.nudt.edu.cn/",
+  "phone": "0731-84574064",
+  "school_phone": "",
+  "miniprogram": "",
+  "content": "国防科技大学的前身是1953年创建于哈尔滨的中国人民解放军军事工程学院，即著名的“哈军工”，陈赓大将任首任院长兼政治委员。“哈军工”创办于朝鲜战争期间，是新中国第一所高等军事工程学院，其卓越的办学成效铸就了我国国防科技和高等教育史上一座丰碑。1970年，学院主体南迁长沙，改名为长沙工学院。1978年，改建为中国人民解放军国防科学技术大学。1999年，长",
+  "video": {
+    "school_id": "939",
+    "url": "387702298835543073",
+    "url_type": "2",
+    "img_url": "https://static-data.eol.cn//upload/svideo/1649321604_7127_thumb.png"
+  },
+  "video_pc": {
+    "school_id": "939",
+    "url": "387702298835543073",
+    "url_type": "2",
+    "img_url": "https://static-data.eol.cn//upload/svideo/1649321604_7127_thumb.png"
+  },
+  "is_video": 1,
+  "dualclass": [
+    {
+      "id": "479",
+      "school_id": "939",
+      "class": "信息与通信工程"
+    },
+    {
+      "id": "478",
+      "school_id": "939",
+      "class": "计算机科学与技术"
+    },
+    {
+      "id": "477",
+      "school_id": "939",
+      "class": "航空宇航科学与技术"
+    },
+    {
+      "id": "476",
+      "school_id": "939",
+      "class": "软件工程"
+    },
+    {
+      "id": "475",
+      "school_id": "939",
+      "class": "管理科学与工程"
+    }
+  ],
+  "special": [
+    {
+      "id": "1378902",
+      "school_id": "939",
+      "special_id": "118",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "物理学",
+      "level_name": "本科"
+    },
+    {
+      "id": "131729",
+      "school_id": "939",
+      "special_id": "1352",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "计算机类",
+      "level_name": "本科"
+    },
+    {
+      "id": "131728",
+      "school_id": "939",
+      "special_id": "1350",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "电子信息类",
+      "level_name": "本科"
+    },
+    {
+      "id": "131730",
+      "school_id": "939",
+      "special_id": "1363",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "航空航天类",
+      "level_name": "本科"
+    },
+    {
+      "id": "174136",
+      "school_id": "939",
+      "special_id": "1351",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "自动化类",
+      "level_name": "本科"
+    },
+    {
+      "id": "42620",
+      "school_id": "939",
+      "special_id": "170",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "信息工程",
+      "level_name": "本科"
+    },
+    {
+      "id": "42621",
+      "school_id": "939",
+      "special_id": "174",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "网络工程",
+      "level_name": "本科"
+    },
+    {
+      "id": "1532433",
+      "school_id": "939",
+      "special_id": "168",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "微电子科学与工程",
+      "level_name": "本科"
+    },
+    {
+      "id": "1036817",
+      "school_id": "939",
+      "special_id": "1108",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "国际事务与国际关系（军事外交）",
+      "level_name": "本科"
+    },
+    {
+      "id": "1036818",
+      "school_id": "939",
+      "special_id": "129",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "应用气象学（气象水文观测与设备维护）",
+      "level_name": "本科"
+    }
+  ],
+  "nature_name": "公办",
+  "province_score_min": {
+    "11": {
+      "school_id": "939",
+      "province_id": "11",
+      "type": "3",
+      "min": "617.00",
+      "year": "2021"
+    },
+    "15": {
+      "school_id": "939",
+      "province_id": "15",
+      "type": "1",
+      "min": "565.00",
+      "year": "2021"
+    },
+    "21": {
+      "school_id": "939",
+      "province_id": "21",
+      "type": "2073",
+      "min": "645.00",
+      "year": "2021"
+    },
+    "23": {
+      "school_id": "939",
+      "province_id": "23",
+      "type": "2",
+      "min": "596.00",
+      "year": "2021"
+    },
+    "32": {
+      "school_id": "939",
+      "province_id": "32",
+      "type": "2074",
+      "min": "606.00",
+      "year": "2021"
+    },
+    "36": {
+      "school_id": "939",
+      "province_id": "36",
+      "type": "1",
+      "min": "629.00",
+      "year": "2021"
+    },
+    "37": {
+      "school_id": "939",
+      "province_id": "37",
+      "type": "3",
+      "min": "626.00",
+      "year": "2021"
+    },
+    "41": {
+      "school_id": "939",
+      "province_id": "41",
+      "type": "1",
+      "min": "650.00",
+      "year": "2021"
+    },
+    "42": {
+      "school_id": "939",
+      "province_id": "42",
+      "type": "2073",
+      "min": "646.00",
+      "year": "2021"
+    },
+    "43": {
+      "school_id": "939",
+      "province_id": "43",
+      "type": "2073",
+      "min": "632.00",
+      "year": "2021"
+    },
+    "51": {
+      "school_id": "939",
+      "province_id": "51",
+      "type": "1",
+      "min": "646.00",
+      "year": "2021"
+    },
+    "52": {
+      "school_id": "939",
+      "province_id": "52",
+      "type": "1",
+      "min": "595.00",
+      "year": "2021"
+    },
+    "64": {
+      "school_id": "939",
+      "province_id": "64",
+      "type": "1",
+      "min": "535.00",
+      "year": "2021"
+    }
+  },
+  "pro_type_min": {
+    "11": [
+      {
+        "year": 2021,
+        "type": {
+          "3": "617.00"
+        }
+      }
+    ],
+    "15": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "565.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "625.00",
+          "1": "567.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "598.00",
+          "1": "554.00"
+        }
+      }
+    ],
+    "21": [
+      {
+        "year": 2021,
+        "type": {
+          "2073": "645.00",
+          "2074": "611.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "650.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "641.00"
+        }
+      }
+    ],
+    "23": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "596.00"
+        }
+      }
+    ],
+    "32": [
+      {
+        "year": 2021,
+        "type": {
+          "2074": "606.00",
+          "2073": "601.00"
+        }
+      }
+    ],
+    "36": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "629.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "631.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "625.00"
+        }
+      }
+    ],
+    "37": [
+      {
+        "year": 2021,
+        "type": {
+          "3": "626.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "3": "645.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "636.00"
+        }
+      }
+    ],
+    "41": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "650.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "664.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "634.00"
+        }
+      }
+    ],
+    "42": [
+      {
+        "year": 2021,
+        "type": {
+          "2073": "646.00",
+          "2074": "623.00"
+        }
+      }
+    ],
+    "43": [
+      {
+        "year": 2021,
+        "type": {
+          "2073": "632.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "642.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "623.00"
+        }
+      }
+    ],
+    "51": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "646.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "652.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "665.00"
+        }
+      }
+    ],
+    "52": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "595.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "622.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "1": "606.00"
+        }
+      }
+    ],
+    "64": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "535.00",
+          "2": "506.00"
+        }
+      }
+    ]
+  },
+  "pro_type": {
+    "11": [
+      "3"
+    ],
+    "15": [
+      "1",
+      "2"
+    ],
+    "21": [
+      "2073",
+      "2074",
+      "1"
+    ],
+    "23": [
+      "2"
+    ],
+    "32": [
+      "2074",
+      "2073"
+    ],
+    "36": [
+      "1"
+    ],
+    "37": [
+      "3",
+      "1"
+    ],
+    "41": [
+      "1"
+    ],
+    "42": [
+      "2073",
+      "2074"
+    ],
+    "43": [
+      "2073",
+      "1"
+    ],
+    "51": [
+      "1"
+    ],
+    "52": [
+      "1"
+    ],
+    "64": [
+      "1",
+      "2"
+    ]
+  },
+  "province_score_year": "2021",
+  "qs_world": "0",
+  "rank": {
+    "ruanke_rank": "0",
+    "xyh_rank": "14",
+    "wsl_rank": "0",
+    "qs_world": "0",
+    "us_rank": "983",
+    "rk_mb": "0",
+    "rk_dl": "0",
+    "rk_zw": "0",
+    "rk_yy": "0",
+    "rk_cj": "0",
+    "rk_yuy": "0",
+    "rk_zf": "0",
+    "rk_ty": "0",
+    "rk_mz": "0",
+    "xyh_gz_1": "0",
+    "xyh_gz_2": "0",
+    "xyh_gz_3": "0",
+    "xyh_mb_1": "0",
+    "xyh_mb_2": "0",
+    "xyh_mb_3": "0",
+    "tws_china": "0"
+  },
+  "fenxiao": [
+    {
+      "fx_name": "长沙校区",
+      "yuanxi": [
+        {
+          "id": "3378",
+          "name": "文理学院"
+        },
+        {
+          "id": "3379",
+          "name": "计算机学院"
+        },
+        {
+          "id": "3380",
+          "name": "电子科学学院"
+        },
+        {
+          "id": "3381",
+          "name": "智能科学学院"
+        }
+      ]
+    }
+  ],
+  "gbh_url": "https://heec.cahe.edu.cn/school/2732",
+  "gbh_num": "3"
+}

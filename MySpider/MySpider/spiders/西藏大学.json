@@ -1,0 +1,923 @@
+{
+  "school_id": "364",
+  "data_code": "542000100",
+  "name": "西藏大学",
+  "type": "5000",
+  "school_type": "6000",
+  "school_nature": "36000",
+  "level": "2001",
+  "code_enroll": "1069400",
+  "belong": "西藏自治区",
+  "f985": "2",
+  "f211": "1",
+  "department": "2",
+  "admissions": "2",
+  "central": "2",
+  "dual_class": "38000",
+  "is_seal": "1",
+  "applied_grade": "0",
+  "num_subject": "1",
+  "num_master": "21",
+  "num_doctor": "3",
+  "num_academician": "0",
+  "num_library": "129万",
+  "num_lab": "1",
+  "province_id": "54",
+  "city_id": "5401",
+  "county_id": "540102",
+  "is_ads": "2",
+  "is_recruitment": "1",
+  "create_date": "1985",
+  "area": 1400,
+  "old_name": "",
+  "status": "1",
+  "add_id": "0",
+  "add_time": "2018-12-08 17:23:21",
+  "update_id": "825",
+  "update_time": "2022-06-04 17:01:59",
+  "ad_level": "1",
+  "short": "藏大",
+  "e_pc": "1",
+  "e_app": "1",
+  "ruanke_rank": "189",
+  "single": "",
+  "colleges_level": "",
+  "doublehigh": "0",
+  "wsl_rank": "551",
+  "qs_rank": "0",
+  "xyh_rank": "200",
+  "is_sell": "2",
+  "eol_rank": "240",
+  "school_batch": "8,14,1534,1564,44,1939,1570,6,7,13,12",
+  "us_rank": "0",
+  "is_logo": "1",
+  "num_master2": "0",
+  "num_doctor2": "10",
+  "ai_status": "1",
+  "is_ads2": "2",
+  "coop_money": "0.00",
+  "bdold_name": "",
+  "logo": "/app/html/upload/logo/364.jpg",
+  "level_name": "普通本科",
+  "type_name": "综合类",
+  "school_type_name": "普通本科",
+  "school_nature_name": "公办",
+  "dual_class_name": "双一流",
+  "xueke_rank": {},
+  "province_single": {},
+  "single_year": 2021,
+  "remark": [],
+  "province_name": "西藏",
+  "city_name": "拉萨市",
+  "town_name": "城关区",
+  "weiwangzhan": "",
+  "urllinks": {
+    "71013": {
+      "school_id": "364",
+      "link": "http://map.baidu.com/?panoid=01023700001309171203469365B&pid=01023700001309171203469365B&panotype=street&heading=96&pitch=4",
+      "type": "71013",
+      "img_url": "",
+      "title": ""
+    },
+    "71006": {
+      "school_id": "364",
+      "link": "https://s95.cnzz.com/z_stat.php?id=1254838678&web_id=1254838678",
+      "type": "71006",
+      "img_url": "",
+      "title": ""
+    },
+    "71004": {
+      "school_id": "364",
+      "link": "https://souky.eol.cn/HomePage/index_43.html",
+      "type": "71004",
+      "img_url": "",
+      "title": ""
+    }
+  },
+  "yjszs": "https://souky.eol.cn/HomePage/index_43.html",
+  "xiaoyuan": "",
+  "email": "zsb@utibet.edu.cn",
+  "school_email": "",
+  "address": "西藏自治区拉萨市藏大东路10号",
+  "postcode": "850000",
+  "site": "http://zjc.utibet.edu.cn/",
+  "school_site": "http://www.utibet.edu.cn",
+  "phone": "0891-6405900",
+  "school_phone": "0891-6405060",
+  "miniprogram": "",
+  "content": "西藏大学是西藏自治区所属综合性大学，是国家“211工程”重点建设高校、世界一流学科建设高校，2013年列入“中西部高等教育振兴计划”，2018年成为教育部与西藏自治区人民政府合建高校。学校办学历史可追溯到1951年进藏部队创办的藏文干部训练班，历经西藏军区干部学校、西藏地方干部学校、西藏行政干部学校等发展阶段。1965年、1975年，为满足百万翻身农奴学习文化，",
+  "video": {
+    "school_id": "364",
+    "url": "5285890782762926886",
+    "url_type": "2",
+    "img_url": "https://static-data.eol.cn//upload/svideo/piliang_364_thumb.jpg"
+  },
+  "video_pc": {
+    "school_id": "364",
+    "url": "5285890782762926886",
+    "url_type": "2",
+    "img_url": "https://static-data.eol.cn//upload/svideo/piliang_364_thumb.jpg"
+  },
+  "is_video": 1,
+  "dualclass": [
+    {
+      "id": "520",
+      "school_id": "364",
+      "class": "生态学"
+    }
+  ],
+  "special": [
+    {
+      "id": "18807",
+      "school_id": "364",
+      "special_id": "116",
+      "nation_feature": "1",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "数学与应用数学",
+      "level_name": "本科"
+    },
+    {
+      "id": "18859",
+      "school_id": "364",
+      "special_id": "139",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "生态学",
+      "level_name": "本科"
+    },
+    {
+      "id": "18858",
+      "school_id": "364",
+      "special_id": "23",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "思想政治教育",
+      "level_name": "本科"
+    },
+    {
+      "id": "18855",
+      "school_id": "364",
+      "special_id": "191",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "资源勘查工程",
+      "level_name": "本科"
+    },
+    {
+      "id": "18854",
+      "school_id": "364",
+      "special_id": "242",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "城乡规划",
+      "level_name": "本科"
+    },
+    {
+      "id": "18856",
+      "school_id": "364",
+      "special_id": "136",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "生物科学",
+      "level_name": "本科"
+    },
+    {
+      "id": "18851",
+      "school_id": "364",
+      "special_id": "309",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "公共事业管理",
+      "level_name": "本科"
+    },
+    {
+      "id": "18849",
+      "school_id": "364",
+      "special_id": "45",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "英语",
+      "level_name": "本科"
+    },
+    {
+      "id": "18848",
+      "school_id": "364",
+      "special_id": "14",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "法学",
+      "level_name": "本科"
+    },
+    {
+      "id": "18869",
+      "school_id": "364",
+      "special_id": "6",
+      "nation_feature": "2",
+      "province_feature": "2",
+      "is_important": "2",
+      "limit_year": "四年",
+      "year": "2019",
+      "level3_weight": "0",
+      "is_video": 2,
+      "special_name": "财政学",
+      "level_name": "本科"
+    }
+  ],
+  "nature_name": "公办",
+  "province_score_min": {
+    "13": {
+      "school_id": "364",
+      "province_id": "13",
+      "type": "2074",
+      "min": "528.00",
+      "year": "2021"
+    },
+    "14": {
+      "school_id": "364",
+      "province_id": "14",
+      "type": "2",
+      "min": "532.00",
+      "year": "2021"
+    },
+    "21": {
+      "school_id": "364",
+      "province_id": "21",
+      "type": "2074",
+      "min": "557.00",
+      "year": "2021"
+    },
+    "31": {
+      "school_id": "364",
+      "province_id": "31",
+      "type": "3",
+      "min": "448.00",
+      "year": "2021"
+    },
+    "33": {
+      "school_id": "364",
+      "province_id": "33",
+      "type": "3",
+      "min": "548.00",
+      "year": "2021"
+    },
+    "37": {
+      "school_id": "364",
+      "province_id": "37",
+      "type": "3",
+      "min": "521.00",
+      "year": "2021"
+    },
+    "41": {
+      "school_id": "364",
+      "province_id": "41",
+      "type": "2",
+      "min": "559.00",
+      "year": "2021"
+    },
+    "42": {
+      "school_id": "364",
+      "province_id": "42",
+      "type": "2074",
+      "min": "561.00",
+      "year": "2021"
+    },
+    "43": {
+      "school_id": "364",
+      "province_id": "43",
+      "type": "2073",
+      "min": "533.00",
+      "year": "2021"
+    },
+    "44": {
+      "school_id": "364",
+      "province_id": "44",
+      "type": "2074",
+      "min": "548.00",
+      "year": "2021"
+    },
+    "45": {
+      "school_id": "364",
+      "province_id": "45",
+      "type": "2",
+      "min": "526.00",
+      "year": "2021"
+    },
+    "50": {
+      "school_id": "364",
+      "province_id": "50",
+      "type": "2074",
+      "min": "544.00",
+      "year": "2021"
+    },
+    "51": {
+      "school_id": "364",
+      "province_id": "51",
+      "type": "2",
+      "min": "542.00",
+      "year": "2021"
+    },
+    "52": {
+      "school_id": "364",
+      "province_id": "52",
+      "type": "2",
+      "min": "554.00",
+      "year": "2021"
+    },
+    "53": {
+      "school_id": "364",
+      "province_id": "53",
+      "type": "1",
+      "min": "509.00",
+      "year": "2021"
+    },
+    "61": {
+      "school_id": "364",
+      "province_id": "61",
+      "type": "2",
+      "min": "485.00",
+      "year": "2021"
+    },
+    "62": {
+      "school_id": "364",
+      "province_id": "62",
+      "type": "2",
+      "min": "500.00",
+      "year": "2021"
+    },
+    "63": {
+      "school_id": "364",
+      "province_id": "63",
+      "type": "2",
+      "min": "456.00",
+      "year": "2021"
+    }
+  },
+  "pro_type_min": {
+    "13": [
+      {
+        "year": 2021,
+        "type": {
+          "2074": "528.00",
+          "2073": "519.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "545.00",
+          "1": "528.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "539.00",
+          "1": "486.00"
+        }
+      }
+    ],
+    "14": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "532.00",
+          "1": "468.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "512.00",
+          "1": "491.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "514.00",
+          "1": "471.00"
+        }
+      }
+    ],
+    "21": [
+      {
+        "year": 2021,
+        "type": {
+          "2074": "557.00",
+          "2073": "509.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "554.00",
+          "1": "494.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "528.00",
+          "1": "472.00"
+        }
+      }
+    ],
+    "31": [
+      {
+        "year": 2021,
+        "type": {
+          "3": "448.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "3": "482.00"
+        }
+      }
+    ],
+    "33": [
+      {
+        "year": 2021,
+        "type": {
+          "3": "548.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "3": "549.00"
+        }
+      }
+    ],
+    "37": [
+      {
+        "year": 2021,
+        "type": {
+          "3": "521.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "3": "522.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "539.00",
+          "1": "504.00"
+        }
+      }
+    ],
+    "41": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "559.00",
+          "1": "518.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "552.00",
+          "1": "539.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "524.00",
+          "1": "489.00"
+        }
+      }
+    ],
+    "42": [
+      {
+        "year": 2021,
+        "type": {
+          "2074": "561.00",
+          "2073": "529.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "516.00",
+          "1": "506.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "517.00",
+          "1": "475.00"
+        }
+      }
+    ],
+    "43": [
+      {
+        "year": 2021,
+        "type": {
+          "2073": "533.00",
+          "2074": "527.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "550.00",
+          "1": "501.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "538.00",
+          "1": "483.00"
+        }
+      }
+    ],
+    "44": [
+      {
+        "year": 2021,
+        "type": {
+          "2074": "548.00",
+          "2073": "544.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "529.00",
+          "1": "513.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "539.00",
+          "1": "477.00"
+        }
+      }
+    ],
+    "45": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "526.00",
+          "1": "471.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "1": "467.00",
+          "2": "451.00"
+        }
+      }
+    ],
+    "50": [
+      {
+        "year": 2021,
+        "type": {
+          "2074": "544.00",
+          "2073": "535.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "533.00",
+          "1": "492.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "525.00",
+          "1": "500.00"
+        }
+      }
+    ],
+    "51": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "542.00",
+          "1": "515.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "520.00",
+          "1": "517.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "533.00",
+          "1": "529.00"
+        }
+      }
+    ],
+    "52": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "554.00",
+          "1": "446.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "536.00",
+          "1": "464.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "520.00",
+          "1": "443.00"
+        }
+      }
+    ],
+    "53": [
+      {
+        "year": 2021,
+        "type": {
+          "1": "509.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "543.00",
+          "1": "519.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "548.00",
+          "1": "508.00"
+        }
+      }
+    ],
+    "61": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "485.00",
+          "1": "428.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "498.00",
+          "1": "439.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "507.00",
+          "1": "457.00"
+        }
+      }
+    ],
+    "62": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "500.00",
+          "1": "428.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "515.00",
+          "1": "444.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "511.00",
+          "1": "458.00"
+        }
+      }
+    ],
+    "63": [
+      {
+        "year": 2021,
+        "type": {
+          "2": "456.00",
+          "1": "437.00"
+        }
+      },
+      {
+        "year": 2020,
+        "type": {
+          "2": "477.00",
+          "1": "393.00"
+        }
+      },
+      {
+        "year": 2019,
+        "type": {
+          "2": "469.00",
+          "1": "388.00"
+        }
+      }
+    ]
+  },
+  "pro_type": {
+    "13": [
+      "2074",
+      "2073",
+      "2",
+      "1"
+    ],
+    "14": [
+      "2",
+      "1"
+    ],
+    "21": [
+      "2074",
+      "2073",
+      "2",
+      "1"
+    ],
+    "31": [
+      "3"
+    ],
+    "33": [
+      "3"
+    ],
+    "37": [
+      "3",
+      "2",
+      "1"
+    ],
+    "41": [
+      "2",
+      "1"
+    ],
+    "42": [
+      "2074",
+      "2073",
+      "2",
+      "1"
+    ],
+    "43": [
+      "2073",
+      "2074",
+      "2",
+      "1"
+    ],
+    "44": [
+      "2074",
+      "2073",
+      "2",
+      "1"
+    ],
+    "45": [
+      "2",
+      "1"
+    ],
+    "50": [
+      "2074",
+      "2073",
+      "2",
+      "1"
+    ],
+    "51": [
+      "2",
+      "1"
+    ],
+    "52": [
+      "2",
+      "1"
+    ],
+    "53": [
+      "1",
+      "2"
+    ],
+    "61": [
+      "2",
+      "1"
+    ],
+    "62": [
+      "2",
+      "1"
+    ],
+    "63": [
+      "2",
+      "1"
+    ]
+  },
+  "province_score_year": "2021",
+  "qs_world": "0",
+  "rank": {
+    "ruanke_rank": "189",
+    "xyh_rank": "200",
+    "wsl_rank": "551",
+    "qs_world": "0",
+    "us_rank": "0",
+    "rk_mb": "0",
+    "rk_dl": "0",
+    "rk_zw": "0",
+    "rk_yy": "0",
+    "rk_cj": "0",
+    "rk_yuy": "0",
+    "rk_zf": "0",
+    "rk_ty": "0",
+    "rk_mz": "0",
+    "xyh_gz_1": "0",
+    "xyh_gz_2": "0",
+    "xyh_gz_3": "0",
+    "xyh_mb_1": "0",
+    "xyh_mb_2": "0",
+    "xyh_mb_3": "0",
+    "tws_china": "0"
+  },
+  "fenxiao": [
+    {
+      "fx_name": "纳金校区",
+      "yuanxi": [
+        {
+          "id": "4264",
+          "name": "工学院"
+        },
+        {
+          "id": "4265",
+          "name": "理学院"
+        },
+        {
+          "id": "4266",
+          "name": "艺术学院"
+        },
+        {
+          "id": "4267",
+          "name": "经济与管理学院"
+        }
+      ]
+    }
+  ],
+  "gbh_url": "https://heec.cahe.edu.cn/school/332",
+  "gbh_num": "3"
+}
