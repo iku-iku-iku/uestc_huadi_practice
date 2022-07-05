@@ -1,10 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+
+  <el-container>
+    <el-header height="100px">
+      <el-col :span="12" :offset="6">
+        <h1 id="title">高等院校分析与推荐系统</h1>
+      </el-col>
+    </el-header>
+    <el-container>
+      <el-aside width="200px">
+        <el-menu class="tab" :default-active="modules[0].name">
+          <el-menu-item v-for="(m, idx) in modules" :key="m.name" :index="m.name">
+            <router-link :to="m.to">
+              <span>{{ m.name }}</span>
+            </router-link>
+          </el-menu-item>
+        </el-menu>
+      </el-aside>
+      <el-main style="overflow: hidden">
+        <router-view />
+      </el-main>
+    </el-container>
+  </el-container>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      modules: [
+        { name: "大学信息展示", to: "/display" },
+        { name: "大学招生信息分析", to: "analysis" },
+        { name: "大学对比分析", to: "compare" },
+        { name: "大学个性化推荐", to: "recommend" },
+      ],
+    };
+  },
+};
+</script>
 
 <style>
 #app {
@@ -15,16 +47,51 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+.el-container,
+header,
+#app,
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
 }
 
-nav a {
+.el-header {
+  background-color: pink;
+}
+.el-aside {
+  background-color: orange;
+}
+
+.el-menu {
+  background-color: pink !important;
+}
+
+.el-menu-item {
+  background-color: rgb(161, 89, 255);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.el-menu-item.is-active {
+  background-color: rgb(30, 120, 255);
+}
+.el-menu-item span {
+  font-size: 18px;
+  color: rgb(0, 255, 128);
   font-weight: bold;
-  color: #2c3e50;
+}
+.el-menu-item.is-active span {
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgb(255, 0, 21);
+  font-weight: bold;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+#title {
+  color: red;
+  font-size: 30px;
 }
 </style>
