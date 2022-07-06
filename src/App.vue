@@ -58,6 +58,10 @@ html {
   width: 100%;
 }
 
+body {
+  background-color: rgba(255, 0, 212, 0.322);
+}
+
 .el-header {
   background-color: pink;
 }

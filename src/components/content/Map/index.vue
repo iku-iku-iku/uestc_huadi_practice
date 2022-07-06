@@ -1,5 +1,5 @@
 <template>
-  <div id="china_map"></div>
+  <div id="container"></div>
 </template>
 
 <script>
@@ -7,141 +7,128 @@ import * as echarts from "echarts";
 require("@/assets/china.js");
 export default {
   mounted() {
-    // 初始化echarts实例
-    this.chinachart = echarts.init(document.getElementById("china_map"));
-    // 进行相关配置
-    this.chartOption = {
+    function randomData() {
+      return Math.round(Math.random() * 500);
+    }
+
+    var dataMap = [
+      { name: "北京", value: randomData() },
+      { name: "天津", value: randomData() },
+      { name: "上海", value: randomData() },
+      { name: "重庆", value: randomData() },
+      { name: "河北", value: randomData() },
+      { name: "河南", value: randomData() },
+      { name: "云南", value: randomData() },
+      { name: "辽宁", value: randomData() },
+      { name: "黑龙江", value: randomData() },
+      { name: "湖南", value: randomData() },
+      { name: "安徽", value: randomData() },
+      { name: "山东", value: randomData() },
+      { name: "新疆", value: randomData() },
+      { name: "江苏", value: randomData() },
+      { name: "浙江", value: randomData() },
+      { name: "江西", value: randomData() },
+      { name: "湖北", value: randomData() },
+      { name: "广西", value: randomData() },
+      { name: "甘肃", value: randomData() },
+      { name: "山西", value: randomData() },
+      { name: "内蒙古", value: randomData() },
+      { name: "陕西", value: randomData() },
+      { name: "吉林", value: randomData() },
+      { name: "福建", value: randomData() },
+      { name: "吉林", value: randomData() },
+      { name: "福建", value: randomData() },
+      { name: "贵州", value: randomData() },
+      { name: "广东", value: randomData() },
+      { name: "青海", value: randomData() },
+      { name: "西藏", value: randomData() },
+      { name: "四川", value: randomData() },
+      { name: "宁夏", value: randomData() },
+      { name: "海南", value: randomData() },
+      { name: "台湾", value: randomData() },
+      { name: "香港", value: randomData() },
+      { name: "澳门", value: randomData() },
+      { name: "南海诸岛", value: randomData() },
+    ];
+
+    // 需要在页面上直接标记出来的城市
+
+    var specialMap = [];
+    // 对dataMap进行处理，使其可以直接在页面上展示
+    for (var i = 0; i < specialMap.length; i++) {
+      for (var j = 0; j < dataMap.length; j++) {
+        if (specialMap[i] == dataMap[j].name) {
+          dataMap[j].selected = true;
+          break;
+        }
+      }
+    }
+
+    var option = {
       tooltip: {
-        // 鼠标移到图里面的浮动提示框
-        // formatter详细配置:  https://echarts.baidu.com/option.html#tooltip.formatter
-        formatter(params, ticket, callback) {
-          // params.data 就是series配置项中的data数据遍历
-          let localValue, perf, downloadSpeep, usability, point;
-          if (params.data) {
-            localValue = params.data.value;
-            perf = params.data.perf;
-            downloadSpeep = params.data.downloadSpeep;
-            usability = params.data.usability;
-            point = params.data.point;
-          } else {
-            // 为了防止没有定义数据的时候报错写的
-            localValue = 0;
-            perf = 0;
-            downloadSpeep = 0;
-            usability = 0;
-            point = 0;
-          }
-          let htmlStr = `
-          <div style='font-size:18px;'> ${params.name}</div>
-          <p style='text-align:left;margin-top:-10px;'>
-	          区域对应数据value: ${localValue}<br/>
-	          性能perf: ${perf}<br/>
-	          下载速度downloadSpeep: ${downloadSpeep}<br/>
-	          可用性usability: ${usability}<br/>
-	          监测点数point: ${point}<br/>
-          </p>
-        `;
-          return htmlStr;
+        formatter: function (params) {
+          var info =
+            '<p style="font-size:18px">' +
+            params.name +
+            '</p><p style="font-size:14px">招生人数：' +
+            params.value +
+            "</p>";
+          return info;
         },
-        // backgroundColor:"#ff7f50",//提示标签背景颜色
-        // textStyle:{color:"#fff"} //提示标签字体颜色
+        backgroundColor: "#ff7f50", //提示标签背景颜色
+        textStyle: { color: "#fff" }, //提示标签字体颜色
       },
-      // visualMap的详细配置解析: https://echarts.baidu.com/option.html#visualMap
+      //左侧小导航图标
       visualMap: {
-        // 左下角的颜色区域
-        type: "piecewise", // 定义为分段型 visualMap
-        min: 0,
-        max: 1000,
-        itemWidth: 40,
-        bottom: 60,
-        left: 20,
-        pieces: [
-          // 自定义『分段式视觉映射组件（visualMapPiecewise）』的每一段的范围，以及每一段的文字，以及每一段的特别的样式
-          { gt: 900, lte: 1000, label: "非常好", color: "#6ad86e" }, // (900, 1000]
-          { gt: 500, lte: 900, label: "正常", color: "#9adcfa" }, // (500, 900]
-          { gt: 310, lte: 500, label: "警告", color: "#ffeb3b" }, // (310, 500]
-          { gt: 200, lte: 300, label: "较差", color: "#ff9800" }, // (200, 300]
-          { gt: 10, lte: 200, label: "非常差", color: "orangered" }, // (10, 200]
-          { value: 0, label: "无数据", color: "#999" }, // [0]
+        show: true,
+        x: "left",
+        y: "center",
+        splitList: [
+          { start: 500, end: 600 },
+          { start: 400, end: 500 },
+          { start: 300, end: 400 },
+          { start: 200, end: 300 },
+          { start: 100, end: 200 },
+          { start: 0, end: 100 },
         ],
-      },
-      // geo配置详解:  https://echarts.baidu.com/option.html#geo
-      geo: {
-        // 地理坐标系组件用于地图的绘制
-        map: "china", // 表示中国地图
-        // roam: true, // 是否开启鼠标缩放和平移漫游
-        zoom: 1.2, // 当前视角的缩放比例（地图的放大比例）
-        label: {
-          show: true,
-        },
-        itemStyle: {
-          // 地图区域的多边形 图形样式。
-          borderColor: "rgba(0, 0, 0, 0.2)",
-          emphasis: {
-            // 高亮状态下的多边形和标签样式
-            shadowBlur: 20,
-            shadowColor: "rgba(0, 0, 0, 0.5)",
-          },
-        },
+        color: [
+          "#5475f5",
+          "#9feaa5",
+          "#85daef",
+          "#74e2ca",
+          "#e6ac53",
+          "#9fb5ea",
+        ],
       },
       series: [
         {
-          name: "", // 浮动框的标题（上面的formatter自定义了提示框数据，所以这里可不写）
+          name: "中国",
           type: "map",
-          geoIndex: 0,
+          mapType: "china",
+
           label: {
-            show: true,
+            normal: {
+              show: true, //显示省份标签
+            },
+            emphasis: {
+              show: true, //对应的鼠标悬浮效果
+            },
           },
-          // 这是需要配置地图上的某个地区的数据，根据后台的返回的数据进行拼接（下面是我定义的假数据）
-          data: [
-            {
-              name: "北京",
-              value: 599,
-              perf: "0.501s", // 性能
-              downloadSpeep: "1.221MB/s", // 下载速度
-              usability: "100%", // 可用性
-              point: "250", // 监测点
-            },
-            {
-              name: "上海",
-              value: 142,
-            },
-            {
-              name: "黑龙江",
-              value: 44,
-            },
-            {
-              name: "新疆",
-              value: 999,
-              perf: "0.501s", // 性能
-              downloadSpeep: "1.221MB/s", // 下载速度
-              usability: "100%", // 可用性
-              point: "250", // 监测点
-            },
-            {
-              name: "深圳",
-              value: 92,
-            },
-            {
-              name: "湖北",
-              value: 810,
-            },
-            {
-              name: "四川",
-              value: 453,
-            },
-          ],
+
+          data: dataMap,
         },
       ],
     };
-    // 使用刚指定的配置项和数据显示地图数据
-    this.chinachart.setOption(this.chartOption);
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById("container"));
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(option);
   },
 };
 </script>
 
 <style scoped>
-#china_map {
+#container {
   width: 100%;
   height: 100%;
 }
