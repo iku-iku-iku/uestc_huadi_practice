@@ -1,5 +1,4 @@
 <template>
-
   <el-container>
     <el-header height="100px">
       <el-col :span="12" :offset="6">
@@ -8,12 +7,12 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <el-menu class="tab" :default-active="modules[0].name">
-          <el-menu-item v-for="(m, idx) in modules" :key="m.name" :index="m.name">
-            <router-link :to="m.to">
+        <el-menu class="tab" :default-active="activeIndex">
+          <router-link :to="m.to" v-for="(m, idx) in modules">
+            <el-menu-item :key="m.name" :index="m.to">
               <span>{{ m.name }}</span>
-            </router-link>
-          </el-menu-item>
+            </el-menu-item>
+          </router-link>
         </el-menu>
       </el-aside>
       <el-main style="overflow: hidden">
@@ -25,13 +24,18 @@
 
 <script>
 export default {
+  computed: {
+    activeIndex() {
+      return this.$route.path
+    },
+  },
   data() {
     return {
       modules: [
         { name: "大学信息展示", to: "/display" },
-        { name: "大学招生信息分析", to: "analysis" },
-        { name: "大学对比分析", to: "compare" },
-        { name: "大学个性化推荐", to: "recommend" },
+        { name: "大学招生信息分析", to: "/analysis" },
+        { name: "大学对比分析", to: "/compare" },
+        { name: "大学个性化推荐", to: "/recommend" },
       ],
     };
   },
@@ -59,14 +63,14 @@ html {
 }
 
 body {
-  background-color: rgba(255, 0, 212, 0.322);
+  background-color: rgba(255, 0, 212, 0.151);
 }
 
 .el-header {
   background-color: pink;
 }
 .el-aside {
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0.459);
 }
 
 .el-menu {

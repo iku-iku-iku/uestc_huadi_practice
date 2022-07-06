@@ -1,135 +1,255 @@
 <template>
-  <div id="container"></div>
+  <div class="wrap">
+    <div class="screen" ref="screen"></div>
+
+    <el-dialog v-model="dialogVisible" :title="chosenProvince">
+      <el-table :data="gridData">
+        <el-table-column label="name">
+          <template #default="scope">
+            <el-tooltip class="box-item" effect="dark">
+              <template #content
+                ><span v-for="adv in scope.row.advantage"> {{adv}}<br /> </span>
+              </template>
+              <el-button>{{scope.row.name}}</el-button>
+            </el-tooltip>
+          </template>
+        </el-table-column>
+        <el-table-column property="type" label="类别"  />
+      </el-table>
+    </el-dialog>
+  </div>
 </template>
 
 <script>
 import * as echarts from "echarts";
 require("@/assets/china.js");
+import { reactive, ref } from "vue";
 export default {
-  mounted() {
-    function randomData() {
-      return Math.round(Math.random() * 500);
-    }
-
-    var dataMap = [
-      { name: "北京", value: randomData() },
-      { name: "天津", value: randomData() },
-      { name: "上海", value: randomData() },
-      { name: "重庆", value: randomData() },
-      { name: "河北", value: randomData() },
-      { name: "河南", value: randomData() },
-      { name: "云南", value: randomData() },
-      { name: "辽宁", value: randomData() },
-      { name: "黑龙江", value: randomData() },
-      { name: "湖南", value: randomData() },
-      { name: "安徽", value: randomData() },
-      { name: "山东", value: randomData() },
-      { name: "新疆", value: randomData() },
-      { name: "江苏", value: randomData() },
-      { name: "浙江", value: randomData() },
-      { name: "江西", value: randomData() },
-      { name: "湖北", value: randomData() },
-      { name: "广西", value: randomData() },
-      { name: "甘肃", value: randomData() },
-      { name: "山西", value: randomData() },
-      { name: "内蒙古", value: randomData() },
-      { name: "陕西", value: randomData() },
-      { name: "吉林", value: randomData() },
-      { name: "福建", value: randomData() },
-      { name: "吉林", value: randomData() },
-      { name: "福建", value: randomData() },
-      { name: "贵州", value: randomData() },
-      { name: "广东", value: randomData() },
-      { name: "青海", value: randomData() },
-      { name: "西藏", value: randomData() },
-      { name: "四川", value: randomData() },
-      { name: "宁夏", value: randomData() },
-      { name: "海南", value: randomData() },
-      { name: "台湾", value: randomData() },
-      { name: "香港", value: randomData() },
-      { name: "澳门", value: randomData() },
-      { name: "南海诸岛", value: randomData() },
-    ];
-
-    // 需要在页面上直接标记出来的城市
-
-    var specialMap = [];
-    // 对dataMap进行处理，使其可以直接在页面上展示
-    for (var i = 0; i < specialMap.length; i++) {
-      for (var j = 0; j < dataMap.length; j++) {
-        if (specialMap[i] == dataMap[j].name) {
-          dataMap[j].selected = true;
-          break;
-        }
-      }
-    }
-
-    var option = {
-      tooltip: {
-        formatter: function (params) {
-          var info =
-            '<p style="font-size:18px">' +
-            params.name +
-            '</p><p style="font-size:14px">招生人数：' +
-            params.value +
-            "</p>";
-          return info;
-        },
-        backgroundColor: "#ff7f50", //提示标签背景颜色
-        textStyle: { color: "#fff" }, //提示标签字体颜色
-      },
-      //左侧小导航图标
-      visualMap: {
-        show: true,
-        x: "left",
-        y: "center",
-        splitList: [
-          { start: 500, end: 600 },
-          { start: 400, end: 500 },
-          { start: 300, end: 400 },
-          { start: 200, end: 300 },
-          { start: 100, end: 200 },
-          { start: 0, end: 100 },
-        ],
-        color: [
-          "#5475f5",
-          "#9feaa5",
-          "#85daef",
-          "#74e2ca",
-          "#e6ac53",
-          "#9fb5ea",
-        ],
-      },
-      series: [
+  name: "default",
+  setup() {
+    const echart = reactive({
+      title: "大学分布", //选中的省份
+      zoom: 0.1,
+    });
+    return {
+      echart,
+    };
+  },
+  data() {
+    return {
+      mapSelParam: null, //选中的参数
+      dialogVisible: ref(false),
+      gridData: [
         {
-          name: "中国",
-          type: "map",
-          mapType: "china",
-
-          label: {
-            normal: {
-              show: true, //显示省份标签
-            },
-            emphasis: {
-              show: true, //对应的鼠标悬浮效果
-            },
-          },
-
-          data: dataMap,
+          name: "电子科技大学",
+          type: "985 211",
+          advantage: ["我是一个优势专业","我是一个优势专业","我是一个优势专业"],
+        },
+        {
+          name: "四川大学",
+          type: "985 211",
+          advantage: ["我是一个优势专业","我是一个优势专业","我是一个优势专业"],
         },
       ],
+      chosenProvince: ref("")
     };
-    //初始化echarts实例
-    var myChart = echarts.init(document.getElementById("container"));
-    //使用制定的配置项和数据显示图表
-    myChart.setOption(option);
+  },
+  components: {},
+  methods: {
+    initEcharts() {
+      //初始化echarts
+      let echartApp = echarts.init(this.$refs.screen);
+
+      //设置配置项
+      echartApp.setOption(this.getEchartsOptions());
+
+      //点击各省份事件处理
+      echartApp.on("click", (param) => {
+        //获取到的省份名
+        let temp = JSON.stringify(this.mapSelParam);
+        if (this.mapSelParam) {
+          //取消选中前一次选中的省份
+          echartApp.dispatchAction({
+            type: "geoUnSelect",
+            seriesIndex: this.mapSelParam.seriesIndex,
+            seriesName: this.mapSelParam.seriesName,
+            dataIndex: this.mapSelParam.dataIndex,
+            name: this.mapSelParam.name,
+          });
+        }
+
+        this.mapSelParam = {
+          seriesIndex: param.seriesIndex,
+          seriesName: param.seriesName,
+          dataIndex: param.dataIndex,
+          name: param.name,
+        };
+
+        //*********************************
+        //***为选中的省份的参数赋值**********
+        //*********************************
+        this.echart["title"] = param.name;
+
+        echartApp.setOption(this.getEchartsOptions());
+        //如果前一次选中与当前选中相同，则return，取消选中
+        if (temp === JSON.stringify(this.mapSelParam)) {
+          this.echart["title"] = "大学分布";
+          echartApp.setOption(this.getEchartsOptions());
+          this.mapSelParam = {};
+          return;
+        }
+
+        //选中当前点击的省份
+        echartApp.dispatchAction({
+          type: "geoSelect",
+          seriesIndex: this.mapSelParam.seriesIndex,
+          seriesName: this.mapSelParam.seriesName,
+          dataIndex: this.mapSelParam.dataIndex,
+          name: this.mapSelParam.name,
+        });
+
+        this.chooseProvince(this.mapSelParam.name);
+      });
+
+      this.$nextTick(() => {
+        this.echart.zoom = 1.1;
+        echartApp.setOption(this.getEchartsOptions());
+      });
+    },
+    getEchartsOptions() {
+      return {
+        title: {
+          text: this.echart.title,
+          textStyle: {
+            color: "#FFF",
+            fontSize: 24,
+          },
+          top: 20,
+          left: 20,
+        },
+        geo: {
+          //引入中国地图
+          map: "china",
+          //是否可以缩放，拖拽
+          roam: true,
+          zoom: this.echart.zoom,
+          //地名配置项
+          label: {
+            //默认情况下配置项
+            normal: {
+              show: true,
+              textStyle: {
+                color: "#CCC",
+              },
+            },
+            //选中高亮情况下配置项
+            emphasis: {
+              textStyle: {
+                color: "#FFF",
+              },
+            },
+          },
+          //各省样式
+          itemStyle: {
+            normal: {
+              areaColor: "#3034A0",
+              borderColor: "#3057D3",
+              borderWidth: 1,
+            },
+            emphasis: {
+              areaColor: "#4467CC",
+              borderColor: "#448aff",
+            },
+          },
+          scaleLimit: {
+            min: 0.7,
+            max: 10,
+          },
+        },
+        //系列配置
+
+        data: [
+          {
+            name: "北京",
+            value: 20057.34,
+            label: {
+              normal: {
+                show: true,
+                formatter: function (params) {
+                  return params.name + "\n" + params.value; //地图上展示文字 + 数值
+                },
+              },
+            },
+            itemStyle: {
+              normal: {
+                areaColor: "#C1FFC1", //地图颜色
+              },
+            },
+          },
+          {
+            name: "江西",
+            value: 15477.48,
+            label: {
+              normal: {
+                show: true,
+                formatter: function (params) {
+                  return params.name + "\n" + params.value;
+                },
+              },
+            },
+          },
+        ],
+
+        // series: [
+        //   {
+        //     name: "大数据",
+        //     type: "map",
+        //     //【此参数必须配置，否则visualMap不起作用】
+        //     geoIndex: 0,
+        //     itemStyle: {
+        //       normal: { label: { show: true } },
+        //       emphasis: { label: { show: true } },
+        //     },
+        //     //此处可接收后端参数，当前数据仅为测试
+        //     data: [
+        //       {
+        //         name: "江西",
+        //         label: {
+        //           normal: {
+        //             show: true,
+        //             formatter: function (params) {
+        //               return params.name + "[1]";
+        //             },
+        //           },
+        //         },
+        //       },
+        //     ],
+        //   },
+        // ],
+        animationType: "scale",
+        animationEasing: "elasticOut",
+        animationDelay: 2000,
+      };
+    },
+    chooseProvince(provinceName) {
+      this.dialogVisible = true
+      this.chosenProvince = provinceName + `[${this.gridData.length}]`
+    },
+  },
+  mounted() {
+    //代码入口
+    this.initEcharts();
   },
 };
 </script>
 
-<style scoped>
-#container {
+<style lang="css" scoped>
+.wrap {
+  background-color: #22287c;
+  min-height: 100%;
+}
+.screen {
   width: 100%;
-  height: 100%;
+  min-height: 800px;
 }
 </style>

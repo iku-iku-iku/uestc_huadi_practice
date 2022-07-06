@@ -1,11 +1,23 @@
 <template>
-  <div class="analysis" id="main" style="width: 600px; height: 400px"></div>
+  <el-main>
+    <el-row>
+      <el-col :span="12">
+        <province-recruit />
+      </el-col>
+      <el-col :span="12">
+        <div class="analysis" id="main" style="height: 100%;"></div>
+      </el-col>
+    </el-row>
+  </el-main>
 </template>
 
 <script>
 import * as echarts from "echarts";
 
+import ProvinceRecruit from "@/components/content/ProvinceRecruit";
+
 export default {
+  components: { ProvinceRecruit },
   data() {
     return {
       // data
@@ -175,4 +187,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.el-main,
+.el-row,
+.el-col {
+  height: 100%;
+}
+</style>
