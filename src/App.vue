@@ -26,6 +26,7 @@
 export default {
   computed: {
     activeIndex() {
+      console.log(this.$route.path);
       return this.$route.path
     },
   },
