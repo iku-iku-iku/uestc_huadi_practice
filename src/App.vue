@@ -27,7 +27,7 @@ export default {
   computed: {
     activeIndex() {
       console.log(this.$route.path);
-      return this.$route.path
+      return this.$route.path;
     },
   },
   data() {
@@ -62,45 +62,49 @@ html {
   height: 100%;
   width: 100%;
 }
-
+a {
+  text-decoration: none;
+}
 body {
-  background-color: rgba(255, 0, 212, 0.151);
+  background-color: rgba(0, 195, 255, 0.151) !important;
 }
-
-.el-header {
-  background-color: pink;
-}
+.el-menu,
 .el-aside {
-  background-color: rgba(255, 166, 0, 0.459);
+  /* background-color: rgba(164, 217, 255, 0.603) !important; */
+  background-color: rgba(0, 195, 255, 0.151) !important;
+  border-right: 2px solid black;
 }
-
-.el-menu {
-  background-color: pink !important;
-}
-
 .el-menu-item {
-  background-color: rgb(161, 89, 255);
+  background-color: rgba(154, 190, 175, 0.527);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
+.el-header {
+  background-color: rgb(193, 235, 243);
+}
+
 .el-menu-item.is-active {
-  background-color: rgb(30, 120, 255);
+  background-color: rgba(2, 103, 255, 0.24);
 }
 .el-menu-item span {
   font-size: 18px;
-  color: rgb(0, 255, 128);
+  /* color: rgb(174, 0, 255); */
+  color: black;
   font-weight: bold;
 }
 .el-menu-item.is-active span {
   font-size: 20px;
   margin-left: 10px;
-  color: rgb(255, 0, 21);
+  /* color: rgba(0, 255, 85, 0.829); */
+  color: black;
   font-weight: bold;
 }
 
 #title {
-  color: red;
-  font-size: 30px;
+  color: black;
+  /* color: rgb(4, 0, 255); */
+  font-size: 36px;
 }
 </style>

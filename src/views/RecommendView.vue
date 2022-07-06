@@ -78,36 +78,10 @@
       <h1 style="font-size:30px; line-height:30px">推荐院校</h1>
     </el-row>
 
-    <el-row class="recommend-item">
+    <el-row class="recommend-item" v-for="i in new Array(10)">
       <el-col>电子科技大学</el-col>
     </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
-    <el-row class="recommend-item">
-      <el-col>电子科技大学</el-col>
-    </el-row>
+
 
   </div>
 </template>
@@ -183,6 +157,6 @@ h1 {
 }
 
 .el-row.recommend-item {
-  border: 2px dashed pink;
+  border: 2px dashed grey;
 }
 </style>
