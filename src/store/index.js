@@ -8,6 +8,7 @@ export default createStore({
     province2Colleges: {},
     college2Id: {},
     college2Province: {},
+    college2Type: {},
     stateId: 0,
     college2Info: {},
   },
