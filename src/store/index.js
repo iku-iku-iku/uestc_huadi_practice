@@ -1,12 +1,18 @@
 import { createStore } from 'vuex'
-
+import getters from "./getters";
+import mutations from "./mutations";
 export default createStore({
   state: {
+    provinces: [],
+    colleges: [],
+    province2Colleges: {},
+    college2Id: {},
+    college2Province: {},
+    stateId: 0,
+    college2Info: {},
   },
-  getters: {
-  },
-  mutations: {
-  },
+  getters,
+  mutations,
   actions: {
   },
   modules: {

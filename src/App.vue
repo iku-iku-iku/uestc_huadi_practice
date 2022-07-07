@@ -16,18 +16,23 @@
         </el-menu>
       </el-aside>
       <el-main style="overflow: hidden">
-        <router-view />
+        <router-view :key="key" />
       </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
+import { request } from "@/network/request.js";
 export default {
   computed: {
     activeIndex() {
-      console.log(this.$route.path);
       return this.$route.path;
+    },
+    key() {
+      return this.$route.name !== undefined
+        ? this.$route.name + +new Date()
+        : this.$route + +new Date();
     },
   },
   data() {
@@ -39,6 +44,19 @@ export default {
         { name: "大学个性化推荐", to: "/recommend" },
       ],
     };
+  },
+  mounted() {
+    request({
+      method: "GET",
+      url: "/province/college/info",
+    })
+      .then((res) => {
+        this.$store.commit("registerProvinces", res.data);
+        console.log("registered");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>

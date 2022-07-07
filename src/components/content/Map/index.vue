@@ -3,27 +3,44 @@
     <div class="screen" ref="screen"></div>
 
     <el-dialog v-model="dialogVisible" :title="chosenProvince">
-      <el-table :data="gridData">
-        <el-table-column label="name">
+      <el-table :data="gridData" width="350">
+        <el-table-column label="大学" width="250">
           <template #default="scope">
             <el-tooltip class="box-item" effect="dark">
-              <template #content
-                ><span v-for="adv in scope.row.advantage"> {{adv}}<br /> </span>
+              <template #content>
+                <span style="font-size: 20px; font-weight: bold">
+                  热门专业<br />
+                </span>
+                <span
+                  style="font-size: 18px"
+                  v-for="adv in scope.row.advantage"
+                >
+                  {{ adv }}<br />
+                </span>
               </template>
-              <el-button>{{scope.row.name}}</el-button>
+              <el-button style="width: 250px">{{ scope.row.name }}</el-button>
             </el-tooltip>
           </template>
         </el-table-column>
-        <el-table-column property="type" label="类别"  />
+        <el-table-column property="type" label="类别" width="100" />
       </el-table>
     </el-dialog>
   </div>
 </template>
 
 <script>
+import { request, requestInfo } from "@/network/request.js";
 import * as echarts from "echarts";
 require("@/assets/china.js");
 import { reactive, ref } from "vue";
+
+class GridDataItem {
+  constructor(name, type, advantage) {
+    this.name = name;
+    this.type = type;
+    this.advantage = advantage;
+  }
+}
 export default {
   name: "default",
   setup() {
@@ -39,19 +56,8 @@ export default {
     return {
       mapSelParam: null, //选中的参数
       dialogVisible: ref(false),
-      gridData: [
-        {
-          name: "电子科技大学",
-          type: "985 211",
-          advantage: ["我是一个优势专业","我是一个优势专业","我是一个优势专业"],
-        },
-        {
-          name: "四川大学",
-          type: "985 211",
-          advantage: ["我是一个优势专业","我是一个优势专业","我是一个优势专业"],
-        },
-      ],
-      chosenProvince: ref("")
+      gridData: [],
+      chosenProvince: ref(""),
     };
   },
   components: {},
@@ -166,74 +172,27 @@ export default {
             max: 10,
           },
         },
-        //系列配置
-
-        data: [
-          {
-            name: "北京",
-            value: 20057.34,
-            label: {
-              normal: {
-                show: true,
-                formatter: function (params) {
-                  return params.name + "\n" + params.value; //地图上展示文字 + 数值
-                },
-              },
-            },
-            itemStyle: {
-              normal: {
-                areaColor: "#C1FFC1", //地图颜色
-              },
-            },
-          },
-          {
-            name: "江西",
-            value: 15477.48,
-            label: {
-              normal: {
-                show: true,
-                formatter: function (params) {
-                  return params.name + "\n" + params.value;
-                },
-              },
-            },
-          },
-        ],
-
-        // series: [
-        //   {
-        //     name: "大数据",
-        //     type: "map",
-        //     //【此参数必须配置，否则visualMap不起作用】
-        //     geoIndex: 0,
-        //     itemStyle: {
-        //       normal: { label: { show: true } },
-        //       emphasis: { label: { show: true } },
-        //     },
-        //     //此处可接收后端参数，当前数据仅为测试
-        //     data: [
-        //       {
-        //         name: "江西",
-        //         label: {
-        //           normal: {
-        //             show: true,
-        //             formatter: function (params) {
-        //               return params.name + "[1]";
-        //             },
-        //           },
-        //         },
-        //       },
-        //     ],
-        //   },
-        // ],
         animationType: "scale",
         animationEasing: "elasticOut",
         animationDelay: 2000,
       };
     },
     chooseProvince(provinceName) {
-      this.dialogVisible = true
-      this.chosenProvince = provinceName + `[${this.gridData.length}]`
+      const colleges = this.$store.state.province2Colleges[provinceName];
+      const ids = colleges.map((col) => col.collegeId);
+      requestInfo(ids, (dataArr) => {
+        console.log(dataArr);
+        this.gridData = dataArr.map(
+          (data) =>
+            new GridDataItem(
+              data.collegeName,
+              this.$store.state.college2Type[data.collegeName],
+              data.popularMajor
+            )
+        );
+        this.dialogVisible = true;
+        this.chosenProvince = provinceName + `[${this.gridData.length}]`;
+      });
     },
   },
   mounted() {

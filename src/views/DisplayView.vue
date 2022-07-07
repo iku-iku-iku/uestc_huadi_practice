@@ -2,11 +2,11 @@
   <div class="home">
     <!-- <el-main> -->
     <el-row>
-      <el-col :span="15" :offset="0" class="umap">
+      <el-col :span="12" :offset="0" class="umap">
         <u-map />
       </el-col>
 
-      <el-col :span="9" class="num-rank">
+      <el-col :span="12" class="num-rank">
         <province-university-num-rank />
       </el-col>
     </el-row>

@@ -4,47 +4,68 @@
 
 <script>
 import * as echarts from "echarts";
+import { ref } from "vue";
 
 export default {
-  mounted() {
-    const chart = echarts.init(document.getElementById("num-rank"));
-    const option = {
-      dataset: [
-        {
-          dimensions: ["name", "score"],
-          source: [
-            ["北京", 100],
-            ["四川", 90],
-            ["江西", 79],
-            ["江苏", 59],
-            ["浙江", 49],
-            ["广东", 32],
-            ["上海", 22],
-            ["湖南", 10],
-            ["广西", 40],
-            ["湖北", 23],
-            ["山东", 34]
-          ],
-        },
-        {
-          transform: {
-            type: "sort",
-            config: { dimension: "score", order: "desc" },
+  computed: {
+    stateId() {
+      return this.$store.state.stateId;
+    },
+    source() {
+      return this.$store.state.provinces.map((province) => [
+        province,
+        this.$store.state.province2Colleges[province].length,
+      ]);
+    },
+    option() {
+      return {
+        title: {
+          show: true,
+          text: "各省大学数量排名",
+          x: "center",
+          textStyle: {
+            fontSize: 22,
           },
         },
-      ],
-      xAxis: {
-        type: "category",
-        axisLabel: { interval: 0, rotate: 30 },
-      },
-      yAxis: {},
-      series: {
-        type: "bar",
-        encode: { x: "name", y: "score" },
-        datasetIndex: 1,
-      },
-    };
-    option && chart.setOption(option);
+        dataset: [
+          {
+            dimensions: ["name", "score"],
+            source: this.source,
+          },
+          {
+            transform: {
+              type: "sort",
+              config: { dimension: "score", order: "desc" },
+            },
+          },
+        ],
+        xAxis: {
+          type: "category",
+          axisLabel: { interval: 0, rotate: 30 },
+        },
+        yAxis: {},
+        series: {
+          type: "bar",
+          encode: { x: "name", y: "score" },
+          datasetIndex: 1,
+        },
+      };
+    },
+  },
+  methods: {
+    refreshChart() {
+      const chart = echarts.init(document.getElementById("num-rank"));
+      const option = this.option;
+      option && chart.setOption(option);
+    },
+  },
+  mounted() {
+    this.refreshChart();
+  },
+  watch: {
+    stateId(n, o) {
+      this.refreshChart();
+    },
   },
 };
 </script>
