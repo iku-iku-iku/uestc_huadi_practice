@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="screen" ref="screen"></div>
 
-    <el-dialog v-model="dialogVisible" :title="chosenProvince">
+    <el-dialog v-model="dialogVisible" :title="chosenProvince" width="20%">
       <el-table :data="gridData" width="350">
         <el-table-column label="大学" width="250">
           <template #default="scope">
@@ -122,16 +122,16 @@ export default {
         echartApp.setOption(this.getEchartsOptions());
       });
     },
+    
     getEchartsOptions() {
       return {
         title: {
           text: this.echart.title,
           textStyle: {
-            color: "#FFF",
             fontSize: 24,
           },
-          top: 20,
-          left: 20,
+          top: 0,
+          left: 'center',
         },
         geo: {
           //引入中国地图
@@ -204,11 +204,11 @@ export default {
 
 <style lang="css" scoped>
 .wrap {
-  background-color: #22287c;
+  background-color: rgba(128, 128, 128, 0);
   min-height: 100%;
 }
 .screen {
   width: 100%;
   min-height: 800px;
 }
-</style>
+</style> -->

@@ -1,12 +1,13 @@
 <template>
   <el-container>
-    <el-header height="100px">
-      <el-col :span="12" :offset="6">
-        <h1 id="title">高等院校分析与推荐系统</h1>
+    <el-header height="70px">
+      <el-col :span="14" :offset="5">
+        <img src="@/assets/纸笔2.png" width="80" align="top" />
+        <span id="title">高等院校分析与推荐系统</span>
       </el-col>
     </el-header>
     <el-container>
-      <el-aside width="200px">
+      <el-aside width="160px">
         <el-menu class="tab" :default-active="activeIndex">
           <router-link :to="m.to" v-for="(m, idx) in modules">
             <el-menu-item :key="m.name" :index="m.to">
@@ -14,6 +15,7 @@
             </el-menu-item>
           </router-link>
         </el-menu>
+        <img id="flower" src="@/assets/荷花2.png" width="160" align="notset" />
       </el-aside>
       <el-main style="overflow: hidden">
         <router-view :key="key" />
@@ -86,6 +88,7 @@ a {
 body {
   background-color: rgba(0, 195, 255, 0.151) !important;
 }
+
 .el-menu,
 .el-aside {
   /* background-color: rgba(164, 217, 255, 0.603) !important; */
@@ -93,7 +96,7 @@ body {
   border-right: 2px solid black;
 }
 .el-menu-item {
-  background-color: rgba(154, 190, 175, 0.527);
+  background-color: #f0c9cf;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -107,22 +110,32 @@ body {
   background-color: rgba(2, 103, 255, 0.24);
 }
 .el-menu-item span {
-  font-size: 18px;
+  font-size: 14px;
   /* color: rgb(174, 0, 255); */
   color: black;
   font-weight: bold;
+  font-family: "宋体";
 }
 .el-menu-item.is-active span {
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 16px;
+  margin-left: 1px;
   /* color: rgba(0, 255, 85, 0.829); */
   color: black;
   font-weight: bold;
+  font-family: "宋体";
 }
 
 #title {
   color: black;
   /* color: rgb(4, 0, 255); */
-  font-size: 36px;
+  font-size: 50px;
+  font-family: "隶书";
+  margin-top: 2px;
+}
+
+#flower {
+  position: fixed;
+  bottom: 2px;
+  left: 0px;
 }
 </style>

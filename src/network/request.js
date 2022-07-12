@@ -1,39 +1,34 @@
 import axios from "axios";
-axios.defaults.retry = 4;
-axios.defaults.retryDelay = 5000;
-axios.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
-  var config = err.config;
-  // If config does not exist or the retry option is not set, reject
-  if (!config || !config.retry) return Promise.reject(err);
-
-  // Set the variable for keeping track of the retry count
-  config.__retryCount = config.__retryCount || 0;
-
-  // Check if we've maxed out the total number of retries
-  if (config.__retryCount >= config.retry) {
-    // Reject with the error
+function retry(err, instance) {
+  let config = err.config;
+  if (!config || !config.retryTimes) return Promise.reject(err);
+  const { __retryCount = 0, retryDelay = 300, retryTimes } = config;
+  // 在请求对象上设置重试次数
+  config.__retryCount = __retryCount;
+  // 判断是否超过了重试次数
+  if (__retryCount >= retryTimes) {
     return Promise.reject(err);
   }
-
-  // Increase the retry count
-  config.__retryCount += 1;
-
-  // Create new promise to handle exponential backoff
-  var backoff = new Promise(function (resolve) {
-    setTimeout(function () {
+  // 增加重试次数
+  config.__retryCount++;
+  // 延时处理
+  const delay = new Promise((resolve) => {
+    setTimeout(() => {
       resolve();
-    }, config.retryDelay || 1);
+    }, retryDelay);
   });
-
-  // Return the promise in which recalls axios to retry the request
-  return backoff.then(function () {
-    return axios(config);
+  // 重新发起请求
+  return delay.then(function () {
+    console.log("接口" + err.config.url + "请求失败，重新请求");
+    return instance(config);
   });
-});
+}
 export function request(config) {
   const instance = axios.create({
     baseURL: "http://company-compare.natapp1.cc",
-    timeout: 5000,
+    timeout: 2000,
+    retryTimes: 20,
+    retryDelay: 1000,
   });
 
   // 添加请求拦截器
@@ -58,7 +53,7 @@ export function request(config) {
     function (error) {
       // 超出 2xx 范围的状态码都会触发该函数。
       // 对响应错误做点什么
-      return Promise.reject(error);
+      return retry(error, instance);
     }
   );
   return instance(config);
