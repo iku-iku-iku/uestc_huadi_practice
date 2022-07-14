@@ -1,5 +1,5 @@
 export default {
-  registerProvinces(state, data) {
+  registerInfo(state, data) {
     state.provinces = Object.keys(data);
     state.province2Colleges = data;
 

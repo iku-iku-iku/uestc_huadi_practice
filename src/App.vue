@@ -53,7 +53,7 @@ export default {
       url: "/province/college/info",
     })
       .then((res) => {
-        this.$store.commit("registerProvinces", res.data);
+        this.$store.commit("registerInfo", res.data);
         console.log("registered");
       })
       .catch((err) => {
@@ -82,6 +82,8 @@ html {
   height: 100%;
   width: 100%;
 }
+
+
 a {
   text-decoration: none;
 }
